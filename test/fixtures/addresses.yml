@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  street_number: 1
+  street_number_suffix: MyString
+  street_type: MyString
+  street_direction: MyString
+  address_type: MyString
+  address_type_identifier: MyString
+  minor_municipality: MyString
+  city_town: MyString
+  province_state_county: MyString
+  postal_area: MyString
+  country: MyString
+  address_kind: MyString
+
+two:
+  street_number: 1
+  street_number_suffix: MyString
+  street_type: MyString
+  street_direction: MyString
+  address_type: MyString
+  address_type_identifier: MyString
+  minor_municipality: MyString
+  city_town: MyString
+  province_state_county: MyString
+  postal_area: MyString
+  country: MyString
+  address_kind: MyString

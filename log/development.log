@@ -6638,3 +6638,331 @@ Served asset /static_pages.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-01 17:42:23 -0800
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "final_price" integer, "event_date" date, "start_time" time, "end_time" time, "event_price" float, "number_of_guests" integer, "budget" integer, "occasion" varchar(255), "num_of_entrees" integer, "num_of_appetizers" integer, "num_of_desserts" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302023537')[0m
+  [1m[35m (229.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "file_path" varchar(255), "caption" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302024153')[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "appetizers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302055322')[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "entrees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302055448')[0m
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "desserts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302055509')[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to CreateAddresses (20130302061505)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street_number" integer, "street_number_suffix" varchar(255), "street_type" varchar(255), "street_direction" varchar(255), "address_type" varchar(255), "address_type_identifier" varchar(255), "minor_municipality" varchar(255), "city_town" varchar(255), "province_state_county" varchar(255), "postal_area" varchar(255), "country" varchar(255), "address_kind" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302061505')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offered_price" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302062202')[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (17.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "event_menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "selected_menu" boolean, "event_id" integer, "menu_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302082346')[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateEventMenus (20130302082346)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "event_menus"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130302082346'
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (15.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMenus (20130302062202)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (10.4ms)[0m  [1mDROP TABLE "menus"[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130302062202'
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offered_price" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302062202')
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEventMenus (20130302082346)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "event_menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "selected_menu" boolean, "event_id" integer, "menu_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302082346')
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCreateMenuAppetizerJoinTables (20130302083835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "create_menu_appetizer_join_tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "menu_id" integer, "appetizer_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302083835')
+  [1m[36m (16.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCreateMenuAppetizerJoinTables (20130302083835)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "create_menu_appetizer_join_tables"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130302083835'
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateEventMenus (20130302082346)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "event_menus"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130302082346'
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "event_menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "selected_menu" boolean, "event_id" integer, "menu_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302082346')
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+Migrating to CreateMenusAppetizersTable (20130302084347)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "menus_appetizers" ("menu_id" integer, "appetizer_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_menus_appetizers_on_menu_id_and_appetizer_id" ON "menus_appetizers" ("menu_id", "appetizer_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_menus_appetizers_on_appetizer_id_and_menu_id" ON "menus_appetizers" ("appetizer_id", "menu_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302084347')[0m
+  [1m[35m (14.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+Migrating to CreateMenusAppetizersTable (20130302084347)
+Migrating to CreateMenusDessertsTable (20130302084639)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "menus_desserts" ("menu_id" integer, "dessert_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_menus_desserts_on_menu_id_and_dessert_id" ON "menus_desserts" ("menu_id", "dessert_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_menus_desserts_on_dessert_id_and_menu_id" ON "menus_desserts" ("dessert_id", "menu_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302084639')[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+Migrating to CreateMenusAppetizersTable (20130302084347)
+Migrating to CreateMenusDessertsTable (20130302084639)
+Migrating to CreateMenusEntreesTable (20130302084757)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "menus_entrees" ("menu_id" integer, "entree_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_menus_entrees_on_menu_id_and_entree_id" ON "menus_entrees" ("menu_id", "entree_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_menus_entrees_on_entree_id_and_menu_id" ON "menus_entrees" ("entree_id", "menu_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302084757')[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (25.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+Migrating to CreateMenusAppetizersTable (20130302084347)
+Migrating to CreateMenusDessertsTable (20130302084639)
+Migrating to CreateMenusEntreesTable (20130302084757)
+Migrating to AddUserIdToEvents (20130302085522)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "events" ADD "user_id" integer
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130302085522')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (17.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130301222043)
+Migrating to AddOmniauthToUsers (20130302003135)
+Migrating to AddFirstNameAndLastNameToUsers (20130302012313)
+Migrating to CreateEvents (20130302023537)
+Migrating to CreatePhotos (20130302024153)
+Migrating to CreateAppetizers (20130302055322)
+Migrating to CreateEntrees (20130302055448)
+Migrating to CreateDesserts (20130302055509)
+Migrating to CreateAddresses (20130302061505)
+Migrating to CreateMenus (20130302062202)
+Migrating to CreateEventMenus (20130302082346)
+Migrating to CreateMenusAppetizersTable (20130302084347)
+Migrating to CreateMenusDessertsTable (20130302084639)
+Migrating to CreateMenusEntreesTable (20130302084757)
+Migrating to AddUserIdToEvents (20130302085522)
+Migrating to AddToPhotos (20130302090823)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "photos" ADD "imageable_id" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "photos" ADD "imageable_type" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302090823')
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

@@ -8,7 +8,15 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
   # attr_accessible :title, :body
 
+  # Validation rules
   validates_presence_of :first_name, :last_name
+
+  # Associations
+  has_many :photos, :as => :imageable
+  has_many :addresses, :as => :addressable
+  has_many :reviews
+  has_many :events
+  has_many :menus
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|

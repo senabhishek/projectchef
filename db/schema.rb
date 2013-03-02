@@ -11,7 +11,109 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302012313) do
+ActiveRecord::Schema.define(:version => 20130302090823) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "street_number"
+    t.string   "street_number_suffix"
+    t.string   "street_type"
+    t.string   "street_direction"
+    t.string   "address_type"
+    t.string   "address_type_identifier"
+    t.string   "minor_municipality"
+    t.string   "city_town"
+    t.string   "province_state_county"
+    t.string   "postal_area"
+    t.string   "country"
+    t.string   "address_kind"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "appetizers", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "desserts", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "entrees", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "event_menus", :force => true do |t|
+    t.boolean  "selected_menu"
+    t.integer  "event_id"
+    t.integer  "menu_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "final_price"
+    t.date     "event_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.float    "event_price"
+    t.integer  "number_of_guests"
+    t.integer  "budget"
+    t.string   "occasion"
+    t.integer  "num_of_entrees"
+    t.integer  "num_of_appetizers"
+    t.integer  "num_of_desserts"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "menus", :force => true do |t|
+    t.float    "offered_price"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "menus_appetizers", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "appetizer_id"
+  end
+
+  add_index "menus_appetizers", ["appetizer_id", "menu_id"], :name => "index_menus_appetizers_on_appetizer_id_and_menu_id"
+  add_index "menus_appetizers", ["menu_id", "appetizer_id"], :name => "index_menus_appetizers_on_menu_id_and_appetizer_id"
+
+  create_table "menus_desserts", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "dessert_id"
+  end
+
+  add_index "menus_desserts", ["dessert_id", "menu_id"], :name => "index_menus_desserts_on_dessert_id_and_menu_id"
+  add_index "menus_desserts", ["menu_id", "dessert_id"], :name => "index_menus_desserts_on_menu_id_and_dessert_id"
+
+  create_table "menus_entrees", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "entree_id"
+  end
+
+  add_index "menus_entrees", ["entree_id", "menu_id"], :name => "index_menus_entrees_on_entree_id_and_menu_id"
+  add_index "menus_entrees", ["menu_id", "entree_id"], :name => "index_menus_entrees_on_menu_id_and_entree_id"
+
+  create_table "photos", :force => true do |t|
+    t.string   "file_path"
+    t.string   "caption"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
