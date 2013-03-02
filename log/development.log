@@ -6966,3 +6966,4 @@ Migrating to AddToPhotos (20130302090823)
   [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130302090823')
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
