@@ -1,3 +1,7 @@
+# This key/secret combo is mainly for Delice (but this is a test anyway)
+FACEBOOK_KEY = "153214788170157"
+FACEBOOK_SECRET = "70342dbd4e7c42b46e617e7a6bd85a77"
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -214,6 +218,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  config.omniauth :facebook, FACEBOOK_KEY, FACEBOOK_SECRET
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
