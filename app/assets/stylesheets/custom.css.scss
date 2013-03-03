@@ -1,5 +1,4 @@
 @import "bootstrap";
-body { padding-top: 60px; }
 
 $grayMediumLight: #eaeaea;
 
@@ -47,4 +46,14 @@ footer {
 
 body {
   padding-top: 60px;
+}
+
+#LogInModal {
+  width: 26%; /* desired relative width */
+  margin: auto auto auto auto;
+  .span12 {
+    button {
+      width: 100%;
+    }
+  }
 }
