@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-  #before_filter :authenticate_user!, except: [:home, :about, :faq, :contact]
 
   def home
   end
