@@ -3,6 +3,7 @@ class ChefApplicationController < ApplicationController
   end
 
   def new
+    @chef_application = ChefApplication.new
   end
 
   def create

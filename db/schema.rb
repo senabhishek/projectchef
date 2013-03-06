@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302090823) do
+ActiveRecord::Schema.define(:version => 20130306083839) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "street_number"
@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(:version => 20130302090823) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "chef_applications", :force => true do |t|
+    t.string   "first_name",     :default => "", :null => false
+    t.string   "last_name",      :default => "", :null => false
+    t.string   "email",          :default => "", :null => false
+    t.integer  "phone_number",   :default => 0,  :null => false
+    t.text     "personal_story", :default => "", :null => false
+    t.text     "motivations",    :default => "", :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  add_index "chef_applications", ["email"], :name => "index_chef_applications_on_email", :unique => true
 
   create_table "desserts", :force => true do |t|
     t.string   "name"
