@@ -1,0 +1,2 @@
+module ChefApplicationHelper
+end
