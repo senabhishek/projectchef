@@ -3,7 +3,7 @@
     <h3>Find a chef for your event!</h1>
     <div class="row">
       <div class="span12">
-        <%= form_tag('/user/search', :method => 'get', :class => 'form-horizontal') do %>
+        <%= form_tag('/user/show', :method => 'get', :class => 'form-horizontal') do %>
           <%= text_field_tag 'gmaps-input-address', nil, :placeholder => 'Where\'s the event happening?', :autofocus => true, :class => "input-large" %>
           <%= text_field_tag 'date', nil, :placeholder => 'Date', :class => 'datepicker input-small' %>
           <%= text_field_tag 'cuisine', nil, :placeholder => 'Cuisine',
