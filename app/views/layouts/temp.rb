@@ -1,0 +1,20 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "ProjectChef", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "How it works", how_it_works_path %></li>
+          <li><%= link_to "Create Booking", '#' %></li>
+          <li><%= link_to "Our Team", about_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <button class="demo btn btn-primary btn-small" data-toggle="modal" href="#LogInModal">LOG IN / SIGN UP</button>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
