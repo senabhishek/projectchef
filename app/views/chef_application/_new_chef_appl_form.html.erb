@@ -3,7 +3,9 @@
     <h2>
       Welcome Chefs!
     </h2>
-    <%= form_for :application do |f| %>
+
+    <%= form_for new_chef_application_path, :html => {:multipart => true} do |f| %>
+
       <div class="controls controls-row">
         <%= f.text_field :first_name, :class => "span3", :autofocus => true, :placeholder => "First Name" %>
       </div>
@@ -29,12 +31,9 @@
 
       <div class="controls controls-row">
         <%= f.label "Profile Picture", :class => "span2" %>
-        <%= f.file_field :profile_picture, :class => "span4", :accept => 'jpg/png' %><br />
+        <%= f.file_field :file_path, :class => "span4", :accept => 'jpg/png' %><br />
       </div>
-      <div class="controls controls-row">
-        <%= f.label "Sample Menu Picture", :class => "span2" %>
-        <%= f.file_field :sample_menu_picture, :class => "span4", :accept => 'jpg/png' %><br />
-      </div>
+
       <div>
         <br /><%= f.submit "Apply!", :class => "btn btn-success span3" %>
       </div>

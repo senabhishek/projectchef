@@ -12,6 +12,9 @@ gem 'omniauth-facebook'
 gem 'cancan'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'aws-sdk'
+gem 'aws-s3'
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.

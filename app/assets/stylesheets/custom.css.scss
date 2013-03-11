@@ -68,29 +68,3 @@ body {
   }
 }
 
-#gmaps-error {
-  color: #cc0000;
-}
-
-#container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  padding: 25px;
-  border: 1px solid #999;
-  -moz-box-shadow:    0px 0px 15px #ccc;
-  -webkit-box-shadow: 0px 0px 15px #ccc;
-  box-shadow:         0px 0px 15px #ccc;
-}
-
-#results {
-  color: #555;
-  padding-top: 10px;
-}
-
-#input #gmaps-output-latitude, #input #gmaps-output-longitude {
-  color: green;
-}
-
-.download { float: right; }

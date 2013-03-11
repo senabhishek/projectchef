@@ -7,6 +7,7 @@ class ChefApplicationController < ApplicationController
   end
 
   def create
+    @chef_application = ChefApplication.new(params[:chef_application])
   end
 
   def show

@@ -1,0 +1,12 @@
+development:
+  bucket: projectchefmedia
+  access_key_id: AKIAJ2OLLB5HUSMCRPWQ
+  secret_access_key: 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
+test:
+  bucket: projectchefmedia
+  access_key_id: AKIAJ2OLLB5HUSMCRPWQ
+  secret_access_key: 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
+production:
+  bucket: projectchefmedia
+  access_key_id: AKIAJ2OLLB5HUSMCRPWQ
+  secret_access_key: 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
