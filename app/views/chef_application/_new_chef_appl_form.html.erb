@@ -1,42 +1,37 @@
 <div id="NewChefAppForm" class="row-fluid">
-  <div class="span12">
+  <div class="span12 pagination-centered">
     <h2>
       Welcome Chefs!
     </h2>
-
-    <%= form_for new_chef_application_path, :html => {:multipart => true} do |f| %>
-
-      <div class="controls controls-row">
-        <%= f.text_field :first_name, :class => "span3", :autofocus => true, :placeholder => "First Name" %>
+    <div class="row">
+      <div class="span8">
+        <h3>Apply Here!</h3>
+        <%= form_for new_chef_application_path, :html => {:multipart => true} do |f| %>
+          <div class="row">
+            <div class="span6">
+              <%= f.text_field :first_name, :class => "span8", :autofocus => true, :placeholder => "First Name" %>
+              <%= f.text_field :last_name, :class => "span8",:placeholder => "Last Name" %>
+              <%= f.email_field :email,  :class => "span8",:placeholder => "Email" %>
+              <%= f.phone_field :phone_number, :class => "span8",:placeholder => "Phone #: x-xxx-xxx-xxxx" %>
+            </div>
+            <div class="span6">
+              <%= image_tag("home/tikka.jpg", :class => "thumbnail span6", :alt => "Add profile photo") %>
+              <%= f.file_field :file_path, :class => "span6" %>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <%= f.text_area :personal_story, :class => "span10", :rows => 8, :placeholder => "Tell us about yourself (1-200 words)" %>
+          </div>
+          <div class="row">
+            <%= f.text_area :motivations, :class => "span10", :rows => 8, :placeholder => "Why do you want to apply to ProjectChef?" %><br />
+          </div>
+          <br /><%= f.submit "Apply!", :class => "btn btn-success" %>
+        <% end %>
       </div>
-      <div class="controls controls-row">
-        <%= f.text_field :last_name, :class => "span3", :placeholder => "Last Name" %>
+      <div class="span4">
+        <h3>What does ProjectChef offer you?</h3>
       </div>
-
-      <div class="controls controls-row">
-        <%= f.email_field :email,  :class => "span3", :placeholder => "Email" %>
-      </div>
-
-      <div class="controls controls-row">
-        <%= f.phone_field :phone_number, :class => "span3", :placeholder => "Phone #: x-xxx-xxx-xxxx" %>
-      </div>
-
-      <div class="controls controls-row">
-        <%= f.text_area :personal_story, :rows => 8, :class => "span6", :placeholder => "Tell us about yourself (1-200 words)" %>
-      </div>
-
-      <div class="controls controls-row">
-        <%= f.text_area :motivations, :rows => 8, :class => "span6", :placeholder => "Why do you want to apply to ProjectChef?" %><br />
-      </div>
-
-      <div class="controls controls-row">
-        <%= f.label "Profile Picture", :class => "span2" %>
-        <%= f.file_field :file_path, :class => "span4", :accept => 'jpg/png' %><br />
-      </div>
-
-      <div>
-        <br /><%= f.submit "Apply!", :class => "btn btn-success span3" %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>
