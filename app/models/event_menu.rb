@@ -1,7 +1,6 @@
 class EventMenu < ActiveRecord::Base
-  attr_accessible :event_id, :menu_id, :selected_menu
+  attr_accessible :selected_menu
 
-  # Associations
-  belongs_to :menu
   belongs_to :event
+  belongs_to :menu
 end

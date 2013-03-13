@@ -2,10 +2,6 @@
 
 one:
   selected_menu: false
-  event_id: 1
-  menu_id: 1
 
 two:
   selected_menu: false
-  event_id: 1
-  menu_id: 1

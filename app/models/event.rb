@@ -7,6 +7,6 @@ class Event < ActiveRecord::Base
   belongs_to :users
   has_many :photos, :as => :imageable
   has_many :addresses, :as => :addressable
-  has_many :eventmenus
-  has_many :menus, :through => :eventmenus
+  has_many :event_menus
+  has_many :menus, :through => :event_menus
 end

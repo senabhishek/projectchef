@@ -3,4 +3,5 @@ class Photo < ActiveRecord::Base
 
   # Associations
   belongs_to :imageable, :polymorphic => true
+  mount_uploader :file_path, PhotosUploader
 end

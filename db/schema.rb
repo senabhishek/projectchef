@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306083839) do
+ActiveRecord::Schema.define(:version => 20130313083009) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "street_number"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20130306083839) do
     t.string   "address_kind"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
   end
 
   create_table "appetizers", :force => true do |t|
@@ -36,6 +38,14 @@ ActiveRecord::Schema.define(:version => 20130306083839) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "appetizers_menus", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "appetizer_id"
+  end
+
+  add_index "appetizers_menus", ["appetizer_id", "menu_id"], :name => "index_appetizers_menus_on_appetizer_id_and_menu_id"
+  add_index "appetizers_menus", ["menu_id", "appetizer_id"], :name => "index_appetizers_menus_on_menu_id_and_appetizer_id"
 
   create_table "chef_applications", :force => true do |t|
     t.string   "first_name",     :default => "", :null => false
@@ -57,6 +67,14 @@ ActiveRecord::Schema.define(:version => 20130306083839) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "desserts_menus", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "dessert_id"
+  end
+
+  add_index "desserts_menus", ["dessert_id", "menu_id"], :name => "index_desserts_menus_on_dessert_id_and_menu_id"
+  add_index "desserts_menus", ["menu_id", "dessert_id"], :name => "index_desserts_menus_on_menu_id_and_dessert_id"
+
   create_table "entrees", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -64,7 +82,15 @@ ActiveRecord::Schema.define(:version => 20130306083839) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "event_menus", :force => true do |t|
+  create_table "entrees_menus", :id => false, :force => true do |t|
+    t.integer "menu_id"
+    t.integer "entree_id"
+  end
+
+  add_index "entrees_menus", ["entree_id", "menu_id"], :name => "index_entrees_menus_on_entree_id_and_menu_id"
+  add_index "entrees_menus", ["menu_id", "entree_id"], :name => "index_entrees_menus_on_menu_id_and_entree_id"
+
+  create_table "event_menus", :id => false, :force => true do |t|
     t.boolean  "selected_menu"
     t.integer  "event_id"
     t.integer  "menu_id"
@@ -93,31 +119,8 @@ ActiveRecord::Schema.define(:version => 20130306083839) do
     t.float    "offered_price"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
   end
-
-  create_table "menus_appetizers", :id => false, :force => true do |t|
-    t.integer "menu_id"
-    t.integer "appetizer_id"
-  end
-
-  add_index "menus_appetizers", ["appetizer_id", "menu_id"], :name => "index_menus_appetizers_on_appetizer_id_and_menu_id"
-  add_index "menus_appetizers", ["menu_id", "appetizer_id"], :name => "index_menus_appetizers_on_menu_id_and_appetizer_id"
-
-  create_table "menus_desserts", :id => false, :force => true do |t|
-    t.integer "menu_id"
-    t.integer "dessert_id"
-  end
-
-  add_index "menus_desserts", ["dessert_id", "menu_id"], :name => "index_menus_desserts_on_dessert_id_and_menu_id"
-  add_index "menus_desserts", ["menu_id", "dessert_id"], :name => "index_menus_desserts_on_menu_id_and_dessert_id"
-
-  create_table "menus_entrees", :id => false, :force => true do |t|
-    t.integer "menu_id"
-    t.integer "entree_id"
-  end
-
-  add_index "menus_entrees", ["entree_id", "menu_id"], :name => "index_menus_entrees_on_entree_id_and_menu_id"
-  add_index "menus_entrees", ["menu_id", "entree_id"], :name => "index_menus_entrees_on_menu_id_and_entree_id"
 
   create_table "photos", :force => true do |t|
     t.string   "file_path"
