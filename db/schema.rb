@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313083009) do
+ActiveRecord::Schema.define(:version => 20130315055352) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "street_number"
@@ -48,17 +48,17 @@ ActiveRecord::Schema.define(:version => 20130313083009) do
   add_index "appetizers_menus", ["menu_id", "appetizer_id"], :name => "index_appetizers_menus_on_menu_id_and_appetizer_id"
 
   create_table "chef_applications", :force => true do |t|
-    t.string   "first_name",     :default => "", :null => false
-    t.string   "last_name",      :default => "", :null => false
-    t.string   "email",          :default => "", :null => false
-    t.integer  "phone_number",   :default => 0,  :null => false
-    t.text     "personal_story", :default => "", :null => false
-    t.text     "motivations",    :default => "", :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "city"
+    t.integer  "phone_number"
+    t.text     "about_me"
+    t.text     "motivation"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "profile_pic"
   end
-
-  add_index "chef_applications", ["email"], :name => "index_chef_applications_on_email", :unique => true
 
   create_table "desserts", :force => true do |t|
     t.string   "name"

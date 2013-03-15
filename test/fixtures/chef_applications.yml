@@ -4,14 +4,18 @@ one:
   first_name: MyString
   last_name: MyString
   email: MyString
+  city: MyString
   phone_number: 1
-  personal_story: MyText
-  motivations: MyText
+  about_me: MyText
+  motivation: MyText
+  profile_picture: 
 
 two:
   first_name: MyString
   last_name: MyString
   email: MyString
+  city: MyString
   phone_number: 1
-  personal_story: MyText
-  motivations: MyText
+  about_me: MyText
+  motivation: MyText
+  profile_picture: 

@@ -1,2 +1,27 @@
-<h1>ChefApplication#show</h1>
-<p>Find me in app/views/chef_application/show.html.erb</p>
+<h1>Listing Incoming Applications</h1>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>City</th>
+  </tr>
+
+  <% @incoming_chef_applications.each do |application| %>
+  <tr>
+    <td><%= application.first_name %></td>
+    <td><%= application.last_name %></td>
+    <td><%= application.email %></td>
+    <td><%= application.phone_number %></td>
+    <td><%= application.city %></td>
+    <td><%= link_to 'Show', '#' %></td>
+    <td><%= link_to 'Edit', '#' %></td>
+    <td><%= link_to 'Accept', '#' %></td>
+    <td><%= link_to 'Deny', '#', :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

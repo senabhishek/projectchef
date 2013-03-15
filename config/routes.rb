@@ -1,6 +1,7 @@
 Projectchef::Application.routes.draw do
 
 resources :events
+resources :chef_application
 
 devise_for :users,  path_names: {sign_in: "login", sign_out: "logout"},
                     controllers: {omniauth_callbacks: "omniauth_callbacks"}
@@ -12,6 +13,7 @@ match '/about', to: 'static_pages#about'
 match '/contact', to: 'static_pages#contact'
 match '/how_it_works', to: 'static_pages#how_it_works'
 match '/chef_apply', to: 'chef_application#new', :as => :new_chef_application
+match '/pending_chef_applications', to: 'chef_application#show', :as => :pending_chef_application
 match '/search', to: 'user#show'
 match '/create_event', to: 'event#new'
 end
