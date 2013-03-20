@@ -15,17 +15,18 @@ gem 'jquery-ui-rails'
 gem 'aws-sdk'
 gem 'aws-s3'
 gem 'carrierwave'
+gem "mini_magick"
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'jquery-fileupload-rails'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'jquery-datatables-rails'
+  gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-will_paginate'
 end
 
 

@@ -11,9 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery.ui.all
+//= require jquery.ui.core
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap-datepicker
-//= require jquery-fileupload
+//= require dataTables/jquery.dataTables
 //= require_tree .
+

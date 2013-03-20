@@ -1,7 +1,7 @@
 <h1>Listing Incoming Applications</h1>
 
-<div class="container-fluid">
-  <table class="table table-striped table-bordered">
+<table class="display table" id="applications" %>
+  <thead>
     <tr>
       <th>ID</th>
       <th>First Name</th>
@@ -9,31 +9,36 @@
       <th>Email</th>
       <th>Phone Number</th>
       <th>City</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-
+  </thead>
+  <tbody>
     <% @incoming_chef_applications.each do |application| %>
-    <tr>
-      <td><%= application.id %></td>
-      <td><%= application.first_name %></td>
-      <td><%= application.last_name %></td>
-      <td><%= application.email %></td>
-      <td><%= application.phone_number %></td>
-      <td><%= application.city %></td>
-      <td>
-        <button class="btn btn-mini">Show</button>
-      </td>
-      <td>
-        <button class="btn btn-mini btn-info">Edit</button>
-      </td>
-      <td>
-        <button class="btn btn-mini btn-success">Accept</button>
-      </td>
-      <td>
-        <button class="btn btn-mini btn-danger">Deny</button>
-      </td>
-    </tr>
-  <% end %>
-  </table>
-</div>
+      <tr>
+        <td><%= application.id %></td>
+        <td><%= application.first_name %></td>
+        <td><%= application.last_name %></td>
+        <td><%= application.email %></td>
+        <td><%= application.phone_number %></td>
+        <td><%= application.city %></td>
+        <td>
+          <button class="btn btn-mini">Show</button>
+        </td>
+        <td>
+          <button class="btn btn-mini btn-info">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-mini btn-success">Accept</button>
+        </td>
+        <td>
+          <button class="btn btn-mini btn-danger">Deny</button>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <br />
